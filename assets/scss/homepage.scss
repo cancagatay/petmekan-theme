@@ -1,0 +1,62 @@
+@import "_reset.scss";
+@import "_layout.scss";
+@import "_product_box.scss";
+
+.top-informed {
+  display: block;
+  border-color: rgb(97, 15, 38);
+  background-color: rgb(97, 15, 38);
+  padding: 0.625rem;
+  & img {
+    width: 100%;
+  }
+}
+#main {
+  #carouselExampleSlidesOnly {
+    @include for_breakpoint(mobile desktop) {
+      margin-top: 37px;
+    }
+    & .slider-image {
+      & a {
+        & img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+.img-responsive {
+  height: auto;
+  max-width: 100%;
+}
+.home-tab-bar {
+  & .nav-tabs {
+    border-bottom: none;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    & .nav-link {
+      background: none;
+      margin-left:10px;
+      cursor: pointer;
+      color: #5a5046;
+      padding: 1.1rem 1.1rem;
+      outline:0;
+      border-radius: 0;
+      border: 2px solid #f2f3f5;
+      transition: 300ms all;
+    }
+    & .nav-link:hover {
+      border: $borderColor 2px solid;
+    }
+    & .active{
+      background: $borderColor !important;
+      color: $textColorOnRed !important;
+      padding: 1.1rem 1.1rem;
+      border: $borderColor 2px solid;
+    }
+    & .active:focus{
+      outline:0;
+    }
+  }
+}
